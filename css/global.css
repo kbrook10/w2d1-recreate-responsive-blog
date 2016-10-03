@@ -3,7 +3,7 @@
     /*border: 1px dashed grey;*/
 }
 /*This is the area for generic styling rules*/
-html, body{
+html, body, main{
     height: 100%;
 }
 main{
@@ -40,6 +40,8 @@ i{
     /*flex-direction: column;*/
     color: white;
     width: 100%;
+    position: relative;
+    /*text-align: center;*/
 }
 .row-pic{
     margin-top: 50px;
@@ -70,20 +72,21 @@ span{
 /*This section deals with the contact images at the bottom of the picture area*/
 .row-contact{
     width: 100%;
+    padding-bottom: 60px;
 }
 .row-btm-col{
     display: flex;
-    padding-top: 50px;
+    padding-top: 0 auto;
+    position: absolute;
+    bottom: 0;
 }
 .col-right{
     flex: 1;
     display: flex;
-    /*justify-content: flex-end;*/
 }
 .col-left{
     flex: 1;
     display: flex;
-    /*justify-content: flex-start;*/
 }
 .col-left > img{
     width: 10%;
@@ -99,16 +102,19 @@ p > i, a > i, h3 > i{
 .col-top-left{
     display: none;
 }
+.bold{
+    font-weight: bold;
+}
 /*This is the section to style the layout for a tablet*/
 @media screen and (min-width: 554px){
     main{
         flex-direction: row;
     }
     .pic-intro{
-        flex: 1;
+        flex: 1.20;
     }
     .content{
-        flex: 2;
+        flex: 1.80;
     }
 }
 /*This is the section to style the layout for a desktop*/
@@ -126,9 +132,9 @@ p > i, a > i, h3 > i{
     }
     .col-top-left{
         display: flex;
-        flex: 1;
+        flex: 1.30;
     }
     .col-top-right{
-        flex: 3;
+        flex: 2.70;
     }
 }
