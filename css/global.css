@@ -6,74 +6,129 @@
 html, body{
     height: 100%;
 }
-
+main{
+    display: flex;
+    flex-direction: column;
+}
 img{
     width: 100%;
     border-radius: 100%;
+    box-shadow: 0 8px 20px #1741BC  ;
 }
 i{
-    margin: 0 10px;
+    margin: 0 5px;
 }
 .row{
     padding: 0 20px;
     margin: 0 auto;
+    text-align: center;
+}
+.row img{
+    width:250px;
 }
 .col{
     flex: 1;
     margin: 0 auto;
     align-items: center;
+    padding: 10px;
 }
 
 /*This is styling for the picture area at top*/
 .pic-intro{
     background-color:#075AFF;
-    display: flex;
-    flex-direction: column;
+    /*display: flex;*/
+    /*flex-direction: column;*/
     color: white;
     width: 100%;
 }
 .row-pic{
-    flex: 4;
     margin-top: 50px;
 }
-.row-grt, .row-intro, .row-contact{
-    flex:2;
+button{
+    border: 1px solid white;
+    background-color: inherit;
+    color: white;
 }
-.row-contact{
-    display: flex;
-    flex-direction: row;
-    width: 35%;
-    border: 2px solid white;
-    justify-content: center;
-    /*align-content: center;*/
+button a{
+    color: white;
+}
+h3 > i{
+    color: blue;
+}
+.col > p{
+    font-size: 10px;
 }
 .row-intro{
     text-align: center;
 }
+.row-grt > p, .col-left > p{
+    opacity: .5;
+}
+span{
+    font-weight: 100;
+}
 /*This section deals with the contact images at the bottom of the picture area*/
+.row-contact{
+    width: 100%;
+}
 .row-btm-col{
     display: flex;
-    width: 90%;
     padding-top: 50px;
 }
 .col-right{
     flex: 1;
     display: flex;
-    justify-content: flex-end;
+    /*justify-content: flex-end;*/
 }
 .col-left{
     flex: 1;
     display: flex;
-    float: left;
+    /*justify-content: flex-start;*/
 }
 .col-left > img{
     width: 10%;
     margin: 0 10px;
 }
 /*This is the section to style the about me section*/
-.col-text > h4{
+.col-text > h4, p > i{
     color:#4377DE;
 }
 p > i, a > i, h3 > i{
     margin:0 15px;
+}
+.col-top-left{
+    display: none;
+}
+/*This is the section to style the layout for a tablet*/
+@media screen and (min-width: 554px){
+    main{
+        flex-direction: row;
+    }
+    .pic-intro{
+        flex: 1;
+    }
+    .content{
+        flex: 2;
+    }
+}
+/*This is the section to style the layout for a desktop*/
+@media screen and (min-width: 768px){
+    .col-top-right > h4{
+        display: none;
+    }
+    .col-section1{
+    display: flex;
+    flex-direction: row;
+    }
+    .col-section2{
+        display: flex;
+        flex-direction: row;
+    }
+    .col-top-left{
+        display: flex;
+        flex: 1;
+    }
+    .col-top-right{
+        flex: 3;
+    }
 }
