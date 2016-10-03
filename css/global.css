@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-    border: 1px dashed grey;
+    /*border: 1px dashed grey;*/
 }
 /*This is the area for generic styling rules*/
 html, body{
@@ -10,6 +10,9 @@ html, body{
 img{
     width: 100%;
     border-radius: 100%;
+}
+i{
+    margin: 0 10px;
 }
 .row{
     padding: 0 20px;
@@ -66,4 +69,11 @@ img{
 .col-left > img{
     width: 10%;
     margin: 0 10px;
+}
+/*This is the section to style the about me section*/
+.col-text > h4{
+    color:#4377DE;
+}
+p > i, a > i, h3 > i{
+    margin:0 15px;
 }
