@@ -1,1 +1,69 @@
-*
+*{
+    box-sizing: border-box;
+    border: 1px dashed grey;
+}
+/*This is the area for generic styling rules*/
+html, body{
+    height: 100%;
+}
+
+img{
+    width: 100%;
+    border-radius: 100%;
+}
+.row{
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.col{
+    flex: 1;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/*This is styling for the picture area at top*/
+.pic-intro{
+    background-color:#075AFF;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 100%;
+}
+.row-pic{
+    flex: 4;
+    margin-top: 50px;
+}
+.row-grt, .row-intro, .row-contact{
+    flex:2;
+}
+.row-contact{
+    display: flex;
+    flex-direction: row;
+    width: 35%;
+    border: 2px solid white;
+    justify-content: center;
+    /*align-content: center;*/
+}
+.row-intro{
+    text-align: center;
+}
+/*This section deals with the contact images at the bottom of the picture area*/
+.row-btm-col{
+    display: flex;
+    width: 90%;
+    padding-top: 50px;
+}
+.col-right{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.col-left{
+    flex: 1;
+    display: flex;
+    float: left;
+}
+.col-left > img{
+    width: 10%;
+    margin: 0 10px;
+}
